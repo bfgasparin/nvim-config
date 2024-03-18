@@ -14,7 +14,10 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 
 -- Make line numbers default
- vim.opt.number = true
+vim.opt.number = true
+
+-- Enable break indent
+vim.opt.breakindent = true
 
 -- vim.opt.backspace = '2'
 -- vim.opt.showcmd = true

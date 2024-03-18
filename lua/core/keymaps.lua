@@ -21,4 +21,7 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
+-- switch between current and last buffer
+vim.keymap.set('n', '<leader>.', '<c-^>', {})
+
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')

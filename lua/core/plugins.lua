@@ -35,6 +35,11 @@ local plugins = {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
   },
+  { -- Fuzzy Finder (files, lsp, etc)
+    'nvim-telescope/telescope.nvim', 
+    tag = '0.1.6',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  }
 }
 local opts = { }
 

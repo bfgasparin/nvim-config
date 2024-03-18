@@ -1,7 +1,7 @@
 -- Fuzzy Finder (files, lsp, etc)
 return {
   {
-    "vim-telescope/telescope.nvim",
+    "nvim-telescope/telescope.nvim",
     tag = '0.1.6',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
@@ -15,7 +15,7 @@ return {
       vim.keymap.set('n', '<c-p>', builtin.find_files, { desc = 'Find Files' })
     end,
   },
---[[  {
+  {
     "nvim-telescope/telescope-ui-select.nvim",
     config = function()
       require("telescope").setup {
@@ -29,5 +29,5 @@ return {
       -- load the extension in telescope
       require("telescope").load_extension("ui-select")
     end,
-  }]]--
+  }
 }

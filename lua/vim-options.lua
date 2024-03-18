@@ -13,6 +13,9 @@ vim.opt.termguicolors = true
 -- Don't show the mode, since it's already in status line
 vim.opt.showmode = false
 
+-- Make line numbers default
+ vim.opt.number = true
+
 -- vim.opt.backspace = '2'
 -- vim.opt.showcmd = true
 -- vim.opt.laststatus = 2

@@ -8,7 +8,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
-      ensure_installed = { "lua_ls", "tsserver" }
+      ensure_installed = { "lua_ls", "tsserver", "intelephense", }
     },
   },
   { -- LSP Configuration & Plugins
@@ -24,6 +24,9 @@ return {
         capabilities = capabilities
       }
       lspconfig.tsserver.setup {
+        capabilities = capabilities
+      }
+      lspconfig.intelephense.setup {
         capabilities = capabilities
       }
 

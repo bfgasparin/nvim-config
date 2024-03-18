@@ -26,12 +26,6 @@ vim.opt.breakindent = true
 -- vim.opt.cursorline = true
 -- vim.opt.autoread = true
 
--- use space for tabs and whatnot
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.shiftround = true
-vim.opt.expandtab = true
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`

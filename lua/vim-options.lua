@@ -1,3 +1,8 @@
+-- disable netrw at the very start of your init.lua 
+-- (required for nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- set up the leader key
 vim.g.mapleader = ','
 vim.g.maplocalleader = ','
@@ -20,8 +25,3 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
-
--- switch between current and last buffer
-vim.keymap.set('n', '<leader>.', '<c-^>', { desc = 'Switch between current and last buffer'})
-
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { desc = 'Clear search highlight'})

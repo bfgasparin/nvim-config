@@ -13,10 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   { -- the colorscheme should be available when starting Neovim
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    "catppuccin/nvim", 
+    name = "catppuccin", 
+    priority = 1000 
   },
   { -- File explorer and dir tree navigation
     "nvim-tree/nvim-tree.lua",

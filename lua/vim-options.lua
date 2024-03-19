@@ -1,5 +1,4 @@
--- disable netrw at the very start of your init.lua 
--- (required for nvim-tree
+-- disable netrw at the very start of init.lua (required for nvim-tree) to work properly
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -19,11 +18,12 @@ vim.opt.number = true
 -- Enable break indent
 vim.opt.breakindent = true
 
+vim.opt.cursorline = true
+-- vim.opt.clipboard = 'unnamedplus'
 -- vim.opt.backspace = '2'
 -- vim.opt.showcmd = true
 -- vim.opt.laststatus = 2
 -- vim.opt.autowrite = true
--- vim.opt.cursorline = true
 -- vim.opt.autoread = true
 
 -- Highlight when yanking (copying) text

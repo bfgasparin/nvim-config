@@ -6,6 +6,7 @@ return {
     options = {
       icons_enabled = true,
       theme = 'dracula',
+      disabled_filetypes = { 'NvimTree' },
     },
     sections = {
       lualine_c = {
@@ -14,6 +15,6 @@ return {
           path = 1,
         }
       },
-    }
+    },
   }
 }

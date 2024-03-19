@@ -14,3 +14,9 @@ vim.keymap.set('n', '<left>', '<c-w>3<')
 vim.keymap.set('n', '<right>', '<c-w>3>')
 vim.keymap.set('n', '<up>', '<c-w>3+')
 vim.keymap.set('n', '<down>', '<c-w>3-')
+
+-- unload and delete current buffer from the list
+vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')
+
+-- quickfix windoe
+vim.keymap.set('n', '<leader>wq', '<cmd>copen<CR>')

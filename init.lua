@@ -1,6 +1,7 @@
 require("vim-options")
 require("keymaps")
 
+-- test comment
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then

@@ -2,7 +2,7 @@
 --  See `:help vim.keymap.set()`
 
 -- switch between current and last buffer
-vim.keymap.set('n', '<leader>.', '<c-^>', { desc = 'Switch between current and last buffer'})
+vim.keymap.set('n', '<leader>.', '<C-^>', { desc = 'Switch between current and last buffer'})
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { desc = 'Clear search highlight'})
 
@@ -13,10 +13,10 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Quickly change windows size
-vim.keymap.set('n', '<left>', '<c-w>3<')
-vim.keymap.set('n', '<right>', '<c-w>3>')
-vim.keymap.set('n', '<up>', '<c-w>3+')
-vim.keymap.set('n', '<down>', '<c-w>3-')
+vim.keymap.set('n', '<left>', '<C-w>3<')
+vim.keymap.set('n', '<right>', '<C-w>3>')
+vim.keymap.set('n', '<up>', '<C-w>3+')
+vim.keymap.set('n', '<down>', '<C-w>3-')
 
 -- unload and delete current buffer from the list
 vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')

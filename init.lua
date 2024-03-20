@@ -1,6 +1,3 @@
-require("vim-options")
-require("keymaps")
-
 --[[
 =====================================================================
 ====================== EXTERNAL REQUIREMENTS ========================
@@ -15,6 +12,9 @@ External Requirements:
   - if you have it set `vim.g.have_nerd_font` in `init.lua` to true
 
 ]]--
+
+require("vim-options")
+require("keymaps")
 
 -- install package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

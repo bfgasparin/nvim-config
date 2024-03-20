@@ -12,7 +12,7 @@ My nvim config
 
 ### Install Neovim
 
-['stable'](https://github.com/neovim/neovim/releases/tag/stable) version.
+Use [stable](https://github.com/neovim/neovim/releases/tag/stable) version.
 
 ### External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)

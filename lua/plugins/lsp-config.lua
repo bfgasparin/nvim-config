@@ -1,19 +1,16 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false,
-    config = true
+    config = true,
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    lazy = false,
     opts = {
       ensure_installed = { "lua_ls", "tsserver", "intelephense", }
     },
   },
   { -- LSP Configuration & Plugins
     "neovim/nvim-lspconfig",
-    lazy = false,
     config = function()
       -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers.
       local capabilities = require('cmp_nvim_lsp').default_capabilities()

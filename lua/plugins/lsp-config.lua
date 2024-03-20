@@ -43,13 +43,19 @@ return {
             vim.keymap.set('n', keys, func, { buffer = ev.buf, desc = 'LSP: ' .. desc })
           end
 
-           -- Jump to the definition of the word under your cursor.
+          --
+          -- Buffer local mappings.
+          --
+
+          -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+
+          -- For below mappings, see `:help vim.lsp.*` for documentation
 
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap

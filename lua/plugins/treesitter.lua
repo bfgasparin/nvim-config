@@ -16,6 +16,10 @@ return {
     highlight = {
       enable = true,
     },
+
+    indent = {
+      enable = true,
+    },
   },
   config = function (plugin, opts)
     local config = require("nvim-treesitter.configs")

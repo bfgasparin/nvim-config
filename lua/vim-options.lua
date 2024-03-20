@@ -18,13 +18,11 @@ vim.opt.number = true
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Show which line your cursor is on
 vim.opt.cursorline = true
--- vim.opt.clipboard = 'unnamedplus'
--- vim.opt.backspace = '2'
--- vim.opt.showcmd = true
--- vim.opt.laststatus = 2
--- vim.opt.autowrite = true
--- vim.opt.autoread = true
+
+-- Set highlight on search 
+vim.opt.hlsearch = true
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

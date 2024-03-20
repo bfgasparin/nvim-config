@@ -20,3 +20,7 @@ vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')
 
 -- quickfix windoe
 vim.keymap.set('n', '<leader>wq', '<cmd>copen<CR>')
+
+-- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier to type
+-- NOTE: This mapping may not work in all terminal emulators/tmux/etc. 
+-- vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

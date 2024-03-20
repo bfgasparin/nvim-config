@@ -19,40 +19,47 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[F]ind existing [B]uffers' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]ind [R]esume' })
       vim.keymap.set('n', '<c-p>', builtin.find_files, { desc = 'Find Files' })
+      vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
+
+      -- Find file in vendor
       vim.keymap.set('n', '<leader>fv', function()
-          builtin.find_files({ no_ignore = true, search_dirs = { 'vendor' } })
+          builtin.find_files({
+            no_ignore = true,
+            search_dirs = { 'vendor' },
+            prompt_title = 'Find Files in Vendor',
+          })
       end, { desc = 'Find in [V]endors' })
+
+      -- search in vendor dir
       vim.keymap.set('n', '<leader>f<Space>', function()
-          builtin.live_grep({ no_ignore = true, search_dirs = { 'vendor' } })
+          builtin.live_grep({
+            no_ignore = true,
+            search_dirs = { 'vendor' },
+            prompt_title = 'Live Grep in Vendors',
+          })
       end, { desc = 'Find by Grep in [V]endors' })
-      vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind in current [W]ord' })
+
+      -- Search on all project
+      vim.keymap.set('n', '<leader>fa', function()
+        builtin.find_files(require('telescope.themes').get_dropdown {
+          winblend = 10,
+          previewer = false,
+          prompt_title = 'Find Files in Project',
+        })
+      end, { desc = '[F]ind in [A]ll Project' })
+
       -- Shortcut for searching your neovim configuration files
       vim.keymap.set('n', '<leader>fn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[F]find in [N]eovim files' })
 
-      -- Slightly advanced example of overriding default behavior and theme
+      -- Search on current buffer
       vim.keymap.set('n', '<leader>/', function()
-        -- You can pass additional configuration to telescope to change theme, layout, etc.
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
           previewer = false,
         })
       end, { desc = '[/] Fuzzily search in current buffer' })
-
-      -- Also possible to pass additional configuration options.
-      --  See `:help telescope.builtin.live_grep()` for information about particular keys
-      vim.keymap.set('n', '<leader>s/', function()
-        builtin.live_grep {
-          grep_open_files = true,
-          prompt_title = 'Live Grep in Open Files',
-        }
-      end, { desc = '[S]earch [/] in Open Files' })
-
-      -- Shortcut for searching your neovim configuration files
-      vim.keymap.set('n', '<leader>sn', function()
-        builtin.find_files { cwd = vim.fn.stdpath 'config' }
-      end, { desc = '[S]earch [N]eovim files' })
     end,
   },
   {

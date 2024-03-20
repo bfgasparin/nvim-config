@@ -4,15 +4,16 @@ return {
   version = "*",
   lazy = false,
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    require("nvim-tree").setup {
-      view = {
-        width = 45,
-      },
-      filters = {
-        dotfiles = true,
-      },
-    }
+  opts = {
+    view = {
+      width = 45,
+    },
+    filters = {
+      dotfiles = true,
+    },
+  },
+  config = function(plugin, opts)
+    require("nvim-tree").setup(opts)
 
     vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
   end,

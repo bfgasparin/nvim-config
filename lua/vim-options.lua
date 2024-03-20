@@ -24,6 +24,10 @@ vim.opt.cursorline = true
 -- Set highlight on search 
 vim.opt.hlsearch = true
 
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`

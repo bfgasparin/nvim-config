@@ -19,6 +19,12 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[F]ind existing [B]uffers' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]ind [R]esume' })
       vim.keymap.set('n', '<c-p>', builtin.find_files, { desc = 'Find Files' })
+      vim.keymap.set('n', '<leader>fv', function()
+          builtin.find_files({ no_ignore = true, search_dirs = { 'vendor' } })
+      end, { desc = 'Find in [V]endors' })
+      vim.keymap.set('n', '<leader>f<Space>', function()
+          builtin.live_grep({ no_ignore = true, search_dirs = { 'vendor' } })
+      end, { desc = 'Find by Grep in [V]endors' })
       vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind in current [W]ord' })
       -- Shortcut for searching your neovim configuration files
       vim.keymap.set('n', '<leader>fn', function()

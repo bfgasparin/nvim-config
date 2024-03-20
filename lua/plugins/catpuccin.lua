@@ -6,7 +6,9 @@ return {
     opts = {
       flavour = "macchiato", -- latte, frappe, macchiato, mocha
     },
-    config = function() 
-      vim.cmd.colorscheme "catppuccin-macchiato"
+    config = function(plugin, opts) 
+      require("catppuccin").setup(opts)
+
+      vim.cmd.colorscheme "catppuccin"
     end
 }

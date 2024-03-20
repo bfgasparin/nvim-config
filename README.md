@@ -12,9 +12,9 @@ My nvim config
 
 ### Install Neovim
 
-Install the latest nvim ['stable'](https://github.com/neovim/neovim/releases/tag/stable) version.
+['stable'](https://github.com/neovim/neovim/releases/tag/stable) version.
 
-External Requirements:
+### External Requirements:
 - Basic utils: `git`, `make`, `unzip`, C Compiler (`gcc`)
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - [fd](https://github.com/sharkdp/fd)

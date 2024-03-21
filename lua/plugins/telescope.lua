@@ -24,20 +24,20 @@ return {
 
       -- Find file in vendor
       vim.keymap.set('n', '<leader>fv', function()
-          builtin.find_files({
-            no_ignore = true,
-            search_dirs = { 'vendor' },
-            prompt_title = 'Find Files in Vendor',
-          })
+        builtin.find_files({
+          no_ignore = true,
+          search_dirs = { 'vendor' },
+          prompt_title = 'Find Files in Vendor',
+        })
       end, { desc = 'Find in [V]endors' })
 
       -- search in vendor dir
       vim.keymap.set('n', '<leader>f<Space>', function()
-          builtin.live_grep({
-            no_ignore = true,
-            search_dirs = { 'vendor' },
-            prompt_title = 'Live Grep in Vendors',
-          })
+        builtin.live_grep({
+          no_ignore = true,
+          search_dirs = { 'vendor' },
+          prompt_title = 'Live Grep in Vendors',
+        })
       end, { desc = 'Find by Grep in [V]endors' })
 
       -- Search on all project

@@ -26,7 +26,5 @@ vim.keymap.set('n', '<down>', '<C-w>3-')
 -- unload and delete current buffer from the list
 vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')
 
--- quickfix windoe
-
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands

@@ -46,6 +46,8 @@ return {
           winblend = 10,
           previewer = false,
           prompt_title = 'Find Files in Project',
+          hidden = true,
+          no_ignore = true,
         })
       end, { desc = '[F]ind in [A]ll Project' })
 

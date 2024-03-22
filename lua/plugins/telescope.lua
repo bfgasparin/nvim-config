@@ -22,6 +22,21 @@ return {
         -require('telescope').load_extension('fzf')
         end
       },
+      {
+        "nvim-telescope/telescope-ui-select.nvim",
+        config = function()
+          require("telescope").setup {
+            extensions = {
+              ["ui-select"] = {
+                require("telescope.themes").get_dropdown {}
+              }
+            }
+          }
+
+          -- load the extension in telescope
+          require("telescope").load_extension("ui-select")
+        end,
+      }
     },
     opts = {
       defaults = {
@@ -84,19 +99,4 @@ return {
       end, { desc = '[/] Fuzzily search in current buffer' })
     end,
   },
-  {
-    "nvim-telescope/telescope-ui-select.nvim",
-    config = function()
-      require("telescope").setup {
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown {}
-          }
-        }
-      }
-
-      -- load the extension in telescope
-      require("telescope").load_extension("ui-select")
-    end,
-  }
 }

@@ -6,6 +6,7 @@ return {
     dependencies = { 
       'nvim-lua/plenary.nvim',
       { -- add fzf support for sorting performance improvement and allow calculating score (cool search)
+        -- unfortunatily this is the c implementation
         'nvim-telescope/telescope-fzf-native.nvim',
 
         -- `build` is used to run some command when the plugin is installed/updated.

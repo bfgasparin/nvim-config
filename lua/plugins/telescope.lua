@@ -67,7 +67,7 @@ return {
       end, { desc = 'Find in [V]endors' })
 
       -- search in vendor dir
-      vim.keymap.set('n', '<leader>f<Space>', function()
+      vim.keymap.set('n', '<leader>fV', function()
         builtin.live_grep({
           search_dirs = { 'vendor' },
           prompt_title = 'Live Grep in Vendors',

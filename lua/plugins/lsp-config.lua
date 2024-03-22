@@ -54,7 +54,12 @@ return {
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
-          map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('gr', function()
+            require('telescope.builtin').lsp_references({
+              fname_width = 45,
+              trim_text = true,
+            })
+          end, '[G]oto [R]eferences')
 
           -- For below mappings, see `:help vim.lsp.*` for documentation
 

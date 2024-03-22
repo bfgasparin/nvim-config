@@ -23,6 +23,9 @@ vim.keymap.set('n', '<right>', '<C-w>3>')
 vim.keymap.set('n', '<up>', '<C-w>3+')
 vim.keymap.set('n', '<down>', '<C-w>3-')
 
+-- save the current buffer
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
+
 -- unload and delete current buffer from the list
 vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')
 

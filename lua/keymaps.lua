@@ -18,16 +18,16 @@ vim.keymap.set('n', '<leader>q', function()
 end, { desc = 'Open [Q]uickfix list' })
 
 -- Quickly change windows size
-vim.keymap.set('n', '<left>', '<C-w>3<')
-vim.keymap.set('n', '<right>', '<C-w>3>')
-vim.keymap.set('n', '<up>', '<C-w>3+')
-vim.keymap.set('n', '<down>', '<C-w>3-')
+vim.keymap.set('n', '<right>', '<C-w>3>', { desc = 'Increase current window width by 3' })
+vim.keymap.set('n', '<left>', '<C-w>3<', { desc = 'Decrease current window width by 3' })
+vim.keymap.set('n', '<up>', '<C-w>3+', { desc = 'Increase current window height by 3' })
+vim.keymap.set('n', '<down>', '<C-w>3-', { desc = 'Decrease current window height by 3' })
 
 -- save the current buffer
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR>')
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = '[W]rite buffer to the current file' })
 
 -- unload and delete current buffer from the list
-vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>')
+vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands

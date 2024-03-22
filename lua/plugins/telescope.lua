@@ -20,7 +20,7 @@ return {
         end,
         config = function()
           -- Enable Telescope extensions in telescope
-        -require('telescope').load_extension('fzf')
+          require('telescope').load_extension('fzf')
         end
       },
       {

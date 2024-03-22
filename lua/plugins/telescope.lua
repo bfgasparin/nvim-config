@@ -3,7 +3,26 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 
+      'nvim-lua/plenary.nvim',
+      { -- add fzf support for sorting performance improvement and allow calculating score (cool search)
+        'nvim-telescope/telescope-fzf-native.nvim',
+
+        -- `build` is used to run some command when the plugin is installed/updated.
+        -- This is only run then, not every time Neovim starts up.
+        build = 'make',
+
+        -- `cond` is a condition used to determine whether this plugin should be
+        -- installed and loaded.
+        cond = function()
+          return vim.fn.executable 'make' == 1
+        end,
+        config = function()
+          -- Enable Telescope extensions in telescope
+        -require('telescope').load_extension('fzf')
+        end
+      },
+    },
     opts = {
       defaults = {
         file_ignore_patterns = { "^public/" },

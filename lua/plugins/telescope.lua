@@ -3,6 +3,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = '0.1.6',
+    event = 'VimEnter',
     dependencies = { 
       'nvim-lua/plenary.nvim',
       { -- add fzf support for sorting performance improvement and allow calculating score (cool search)

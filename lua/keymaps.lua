@@ -13,7 +13,7 @@ vim.keymap.set('n', '<Space>k', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]el
 -- go to the previous buffer in the buffer list
 vim.keymap.set('n', '<Space>j', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
 -- switch between current and last buffer
-vim.keymap.set('n', '<Space>,', '<C-^>', { desc = 'Switch between current and last buffer'})
+vim.keymap.set('n', '<Space>.', '<C-^>', { desc = 'Switch between current and last buffer'})
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })

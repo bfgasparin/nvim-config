@@ -8,7 +8,7 @@ return   {
   { -- git terminal UI
     "kdheepak/lazygit.nvim",
     keys = {
-      {'<leader>g', '<cmd>LazyGit<CR>', desc = 'Open Lazy[G]it UI'},
+      {',g', '<cmd>LazyGit<CR>', desc = 'Open Lazy[G]it UI'},
     },
     cmd = {
       "LazyGit",

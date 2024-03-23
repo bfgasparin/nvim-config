@@ -1,10 +1,19 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+--
+-- buffers 
+--
+-- save the current buffer
+vim.keymap.set('n', ',w', '<cmd>w<CR>', { desc = '[W]rite buffer to the current file' })
+-- unload and delete current buffer from the list
+vim.keymap.set('n', ',d', '<cmd>bd<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+-- go to the next buffer in the buffer list
+vim.keymap.set('n', '<Space>k', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+-- go to the previous buffer in the buffer list
+vim.keymap.set('n', '<Space>j', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
 -- switch between current and last buffer
-vim.keymap.set('n', '<leader>.', '<C-^>', { desc = 'Switch between current and last buffer'})
-
-vim.keymap.set('n', '<leader>h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
+vim.keymap.set('n', '<Space>,', '<C-^>', { desc = 'Switch between current and last buffer'})
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
@@ -23,11 +32,8 @@ vim.keymap.set('n', '<left>', '<C-w>3<', { desc = 'Decrease current window width
 vim.keymap.set('n', '<up>', '<C-w>3+', { desc = 'Increase current window height by 3' })
 vim.keymap.set('n', '<down>', '<C-w>3-', { desc = 'Decrease current window height by 3' })
 
--- save the current buffer
-vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = '[W]rite buffer to the current file' })
-
--- unload and delete current buffer from the list
-vim.keymap.set('n', '<leader>d', '<cmd>bd<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+-- highlight
+vim.keymap.set('n', ',h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands

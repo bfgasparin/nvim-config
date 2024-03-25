@@ -56,7 +56,7 @@ return {
       vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'Find Files' })
       vim.keymap.set('n', '<C-g>', builtin.git_status, { desc = 'Find in Git Status' })
       vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
-      vim.keymap.set('n', '<leader>ff', builtin.live_grep, { desc = '[F]ind by [G]rep' })
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind by [G]rep' })
 
       -- Find file in vendor
       vim.keymap.set('n', '<leader>fv', function()

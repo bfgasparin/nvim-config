@@ -9,9 +9,9 @@ vim.keymap.set('n', ',w', '<cmd>w<CR>', { desc = '[W]rite buffer to the current 
 -- unload and delete current buffer from the list
 vim.keymap.set('n', ',d', '<cmd>bd<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
 -- go to the next buffer in the buffer list
-vim.keymap.set('n', '<Space>k', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+vim.keymap.set('n', '<Space>k', '<cmd>bn<CR>', { desc = 'Go to next buffer in the buffer list' })
 -- go to the previous buffer in the buffer list
-vim.keymap.set('n', '<Space>j', '<cmd>bn<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+vim.keymap.set('n', '<Space>j', '<cmd>bp<CR>', { desc = 'Go to previous buffer in the buffer list' })
 -- switch between current and last buffer
 vim.keymap.set('n', '<Space>.', '<C-^>', { desc = 'Switch between current and last buffer'})
 

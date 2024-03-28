@@ -19,7 +19,7 @@ vim.keymap.set('n', '<Space>.', '<C-^>', { desc = 'Switch between current and la
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
-vim.keymap.set('n', '<leader>l', vim.diagnostic.setloclist, { desc = 'Open diagnostic in [L]ocation list' })
+vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostic in [L]ocation list' })
 vim.keymap.set('n', '<leader>q', function()
     local qf_winid = vim.fn.getqflist({ winid = 0 }).winid
     local action = qf_winid > 0 and 'cclose' or 'copen'
@@ -34,6 +34,13 @@ vim.keymap.set('n', '<down>', '<C-w>3-', { desc = 'Decrease current window heigh
 
 -- highlight
 vim.keymap.set('n', ',h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
+
+-- Laravel artisan
+vim.keymap.set('n', '<leader>lt', function()
+    local action = '| terminal docker compose exec api php artisan tinker'
+    vim.cmd('botright new ' ..action)
+end, { desc = 'Enter on Laravel Tinker'})
+
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands

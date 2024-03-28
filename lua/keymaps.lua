@@ -36,7 +36,7 @@ vim.keymap.set('n', '<down>', '<C-w>3-', { desc = 'Decrease current window heigh
 vim.keymap.set('n', ',h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
 
 -- Laravel artisan
-vim.keymap.set('n', '<leader>lt', function()
+vim.keymap.set('n', '<leader><leader>lt', function()
     local action = '| terminal docker compose exec api php artisan tinker'
     vim.cmd('botright new ' ..action)
 end, { desc = 'Enter on Laravel Tinker'})

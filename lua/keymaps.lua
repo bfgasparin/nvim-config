@@ -39,7 +39,12 @@ vim.keymap.set('n', ',h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highligh
 vim.keymap.set('n', '<leader><leader>lt', function()
     local action = '| terminal docker compose exec api php artisan tinker'
     vim.cmd('botright new ' ..action)
-end, { desc = 'Enter on Laravel Tinker'})
+end, { desc = 'Enter on [L]aravel [T]inker'})
+
+vim.keymap.set('n', '<leader><leader>da', function()
+    local action = '| terminal docker compose exec api bash'
+    vim.cmd('botright new ' ..action)
+end, { desc = 'Enter on [D]ocker [A]PI container'})
 
 
 -- [[ Basic Autocommands ]]

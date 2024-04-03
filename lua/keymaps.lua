@@ -33,7 +33,7 @@ vim.keymap.set('n', '<up>', '<C-w>3+', { desc = 'Increase current window height 
 vim.keymap.set('n', '<down>', '<C-w>3-', { desc = 'Decrease current window height by 3' })
 
 -- highlight
-vim.keymap.set('n', ',h', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlight'})
 
 -- Laravel artisan
 vim.keymap.set('n', '<leader><leader>lt', function()

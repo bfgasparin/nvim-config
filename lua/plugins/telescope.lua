@@ -27,10 +27,24 @@ return {
       {
         "nvim-telescope/telescope-ui-select.nvim",
         config = function()
+          local actions = require "telescope.actions"
+
           require("telescope").setup {
             extensions = {
               ["ui-select"] = {
                 require("telescope.themes").get_dropdown {}
+              }
+            },
+            pickers = {
+              buffers = {
+                mappings = {
+                  i = {
+                    ["<M-d>"] = actions.delete_buffer,
+                  },
+                  n = {
+                    ["d"] = actions.delete_buffer,
+                  }
+                }
               }
             }
           }

@@ -7,6 +7,7 @@ return {
       icons_enabled = true,
       theme = 'auto',
       disabled_filetypes = { 'NvimTree' },
+      globalstatus = true,
     },
     sections = {
       -- lualine_a = {'branch', 'diff', 'diagnostics'},

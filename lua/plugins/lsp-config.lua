@@ -8,7 +8,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
-      ensure_installed = { "lua_ls", "intelephense", "tsserver", "volar", "tailwindcss" }
+      ensure_installed = { "lua_ls", "intelephense", "tsserver", "volar", "tailwindcss", "solidity_ls_nomicfoundation" }
     },
   },
   { -- LSP Configuration & Plugins
@@ -30,6 +30,9 @@ return {
         capabilities = capabilities
       }
       lspconfig.tailwindcss.setup {
+        capabilities = capabilities
+      }
+      lspconfig.solidity_ls_nomicfoundation.setup {
         capabilities = capabilities
       }
 

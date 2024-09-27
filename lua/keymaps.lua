@@ -8,6 +8,8 @@
 vim.keymap.set('n', ',w', '<cmd>w<CR>', { desc = '[W]rite buffer to the current file' })
 -- unload and delete current buffer from the list
 vim.keymap.set('n', ',d', '<cmd>bd<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list' })
+-- unload and delete current buffer from the list without mixing windows splits
+vim.keymap.set('n', ',D', '<C-^><cmd>bdelete#<CR>', { desc = 'Unload buffer and [D]elete it from the buffer list without mixing windows splits' })
 -- go to the next buffer in the buffer list
 vim.keymap.set('n', '<Space>]', '<cmd>bn<CR>', { desc = 'Go to next buffer in the buffer list' })
 -- go to the previous buffer in the buffer list

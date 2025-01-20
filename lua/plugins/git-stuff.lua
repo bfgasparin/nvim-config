@@ -7,6 +7,7 @@ return   {
     "kdheepak/lazygit.nvim",
     keys = {
       {',g', '<cmd>LazyGit<CR>', desc = 'Open Lazy[G]it UI'},
+      {',c', '<cmd>LazyGitFilterCurrentFile<CR>', desc = 'Open buffer commits using Lazy[G]it UI'},
     },
     cmd = {
       "LazyGit",
